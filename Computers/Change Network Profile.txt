@@ -1,0 +1,40 @@
+PSS by Admin
+
+Get Network List:
+
+PS C:\Windows\system32> Get-NetConnectionProfile
+
+
+Name             : Network
+InterfaceAlias   : Metro.nw
+InterfaceIndex   : 14
+NetworkCategory  : Public
+IPv4Connectivity : LocalNetwork
+IPv6Connectivity : NoTraffic
+
+Name             : Unidentified network
+InterfaceAlias   : ST
+InterfaceIndex   : 15
+NetworkCategory  : Public
+IPv4Connectivity : Internet
+IPv6Connectivity : NoTraffic
+
+Name             : systech.local
+InterfaceAlias   : Systech
+InterfaceIndex   : 12
+NetworkCategory  : Private
+IPv4Connectivity : LocalNetwork
+IPv6Connectivity : NoTraffic
+
+Name             : Network  4
+InterfaceAlias   : YotaModem
+InterfaceIndex   : 22
+NetworkCategory  : Public
+IPv4Connectivity : Internet
+IPv6Connectivity : NoTraffic
+
+
+Set Profile for network:
+
+PS C:\Windows\system32> Set-NetConnectionProfile -Name "Network" -NetworkCategory Private
+PS C:\Windows\system32> Set-NetConnectionProfile -Name "Unidentified network" -NetworkCategory Private
